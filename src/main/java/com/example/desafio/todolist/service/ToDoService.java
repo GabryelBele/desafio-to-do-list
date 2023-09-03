@@ -28,7 +28,7 @@ public class ToDoService {
         return toDoRepository.findAll(sort);
     }
 
-    public List<Todo> update(Todo todo) {
+    public List<Todo> updateToDo(Todo todo) {
         toDoRepository.save(todo);
         return list();
     }

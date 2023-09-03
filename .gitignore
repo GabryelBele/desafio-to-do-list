@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+# Arquivo de configuração do banco de dados
+application.properties
