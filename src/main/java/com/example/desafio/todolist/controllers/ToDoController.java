@@ -36,7 +36,7 @@ public class ToDoController {
 
     @PutMapping
     public List<Todo> update(@RequestBody Todo todo) {
-        return toDoService.update(todo);
+        return toDoService.updateToDo(todo);
     }
 
     @DeleteMapping("/{id}")
