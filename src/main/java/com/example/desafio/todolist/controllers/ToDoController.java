@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.desafio.todolist.dto.ToDoDto;
 import com.example.desafio.todolist.model.Todo;
 import com.example.desafio.todolist.service.ToDoService;
 
@@ -34,9 +35,9 @@ public class ToDoController {
         return toDoService.list();
     }
 
-    @PutMapping
-    public List<Todo> update(@RequestBody Todo todo) {
-        return toDoService.updateToDo(todo);
+    @PutMapping("/{id}")
+    public Todo update(@PathVariable(value = "id") Long id ,@RequestBody ToDoDto toDoDto) {
+        return toDoService.updateToDo(id,toDoDto);
     }
 
     @DeleteMapping("/{id}")
